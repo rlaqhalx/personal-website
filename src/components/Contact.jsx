@@ -15,7 +15,7 @@ const Contact = (props) => {
         <header>
           <h2 className="h2 article-title">Contact</h2>
         </header>
-
+        
         {/* Map */}
         {/* <section className="mapbox" data-mapbox>
         <figure>
