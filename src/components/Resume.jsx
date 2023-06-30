@@ -7,6 +7,101 @@ import { faSchool, faBuilding } from "@fortawesome/free-solid-svg-icons";
 const Resume = (props) => {
   const { handleSectionClick, activeSection } = props;
 
+  const experienceData = [
+    {
+      title: "Frontend Developer",
+      duration: "2023 — Present",
+      company: "Civilience",
+      description: (
+        <>
+          <p>
+            - Worked on building the emotional flow chart feature to track
+            users’ emotional status
+          </p>
+          <p>- Provide personalized assistance by leveraging the data model</p>
+        </>
+      ),
+    },
+    {
+      title: "Research Assistant",
+      duration: "2021 — 2023",
+      company: "Johns Hopkins Whiting School of Engineering",
+      description: (
+        <>
+          <p>- Worked on development for the assistive robot for elderly</p>
+          <p>
+            - Built user-friendly platform that enable intuitive interaction and
+            communication with the robot using Natural Language Processing
+            techniques Intuitive Computing Laboratory
+          </p>
+          <p>- Intuitive Computing Laboratory & advised by Dr. Huang</p>
+        </>
+      ),
+    },
+    {
+      title: "Full Stack Developer",
+      duration: "2022 — 2023",
+      company: "Delieno Disease Modeling",
+      description: (
+        <>
+          <p>
+            - Built a community-level simulator to portfolio how COVID-19 spread
+            in different types of communities
+          </p>
+          <p>
+            - Used React to design the reusable components for the simulation
+            and web
+          </p>
+        </>
+      ),
+    },
+    {
+      title: "Frontend Developer",
+      duration: "2022",
+      company: "Medistream",
+      description: (
+        <>
+          <p>
+            - Developed chat application to facilitate interaction between
+            doctors and patients
+          </p>
+          <p>- Used Vue2, Sendbird & Filepond to upload file </p>
+          <p></p>
+        </>
+      ),
+    },
+    {
+      title: "Product Owner",
+      duration: "2021 - 2022",
+      company: "Delieno Diease Modeling",
+      description: (
+        <>
+          <p>
+            - Managed the public-facing aspects and conducted research for the
+            development of the mode
+          </p>
+          <p>
+            - Facilitated communication between different teams as well as
+            within information support team and managed the product backlog as
+            product owner{" "}
+          </p>
+          <p></p>
+        </>
+      ),
+    },
+    {
+      title: "Research Assistant",
+      duration: "2021 - 2022",
+      company: "Johns Hopkins Bloomberg School of Public Health",
+      description: (
+        <>
+          <p>- Conducted genome sequencing and analyzed genomic data</p>
+          <p>- Department of Biostatistics & advised by Dr. Ji</p>
+        </>
+      ),
+    },
+  ];
+
   return (
     <div className="main-content">
       <NavBar
@@ -36,7 +131,7 @@ const Resume = (props) => {
                 Johns Hopkins University
               </h4>
               <span>2023 — 2025</span>
-              <p className="timeline-text">
+              <p className="timeline-text" style={{  textAlign: "center" }}>
                 Master of Science degree in Data Science (M.S.) from the Global
                 Innovation and Leadership program
               </p>
@@ -47,7 +142,7 @@ const Resume = (props) => {
                 Johns Hopkins University
               </h4>
               <span>2019 — 2023</span>
-              <p className="timeline-text">
+              <p className="timeline-text" style={{  textAlign: "center" }}>
                 Bachelor's degree in Computer Science (B.S.) and Public Health
                 (B.A.)
               </p>
@@ -67,67 +162,14 @@ const Resume = (props) => {
           </div>
 
           <ol className="timeline-list">
-            <li className="timeline-item">
-              <h4 className="h4 timeline-item-title">Frontend Developer</h4>
-              <span>2023 — Present</span>
-              <p className="timeline-text">
-                - Worked on building the emotional flow chart feature to track
-                users’ emotional status <br></br>- Provide personalized
-                assistance by leveraging the data model
-              </p>
-            </li>
-
-            <li className="timeline-item">
-              <h4 className="h4 timeline-item-title">Research Assistant</h4>
-              <span>2021 — 2023</span>
-              <p className="timeline-text">
-                - Worked on development for the assistive robot for elderly{" "}
-                <br></br>- Built user-friendly platform that enable intuitive
-                interaction and communication with the robot using Natural
-                Language Processing techniques <br></br>- Intuitive Computing
-                Laboratory & advised by Dr. Huang
-              </p>
-            </li>
-
-            <li className="timeline-item">
-              <h4 className="h4 timeline-item-title">Full Stack Developer</h4>
-              <span>2022 — 2023</span>
-              <p className="timeline-text">
-                - Built a community-level simulator to portfolio how COVID-19 spread
-                in different types of communities <br></br> - Used React to
-                design the reusable components for the simulation and web
-              </p>
-            </li>
-
-            <li className="timeline-item">
-              <h4 className="h4 timeline-item-title">Frontend Developer</h4>
-              <span>2022</span>
-              <p className="timeline-text">
-                - Developed chat application to facilitate interaction between
-                doctors and patients <br></br>- Used Vue2, Sendbird & Filepond
-                to upload file
-              </p>
-            </li>
-
-            <li className="timeline-item">
-              <h4 className="h4 timeline-item-title">Product Owner</h4>
-              <span>2021 - 2022</span>
-              <p className="timeline-text">
-                - Managed the public-facing aspects and conducted research for
-                the development of the mode <br></br>- Facilitated communication
-                between different teams as well as within information support
-                team and managed the product backlog as product owner
-              </p>
-            </li>
-
-            <li className="timeline-item">
-              <h4 className="h4 timeline-item-title">Research Assistant</h4>
-              <span>2021 - 2022</span>
-              <p className="timeline-text">
-                - Conducted genome sequencing and analyzed genomic data{" "}
-                <br></br>- Department of Biostatistics & advised by Dr. Ji
-              </p>
-            </li>
+            {experienceData.map((item, index) => (
+              <li className="timeline-item" key={index}>
+                <h4 className="h4 timeline-item-title">{item.title}</h4>
+                <span>@ {item.company}</span>
+                <span>{item.duration}</span>
+                <p className="timeline-text">{item.description}</p>
+              </li>
+            ))}
           </ol>
         </section>
 
@@ -188,8 +230,6 @@ const Resume = (props) => {
             </li>
           </ul>
         </section> */}
-
-
       </article>
     </div>
   );

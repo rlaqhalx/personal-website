@@ -1,8 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "./Navbar";
 
 const Contact = (props) => {
   const { handleSectionClick, activeSection } = props;
+
+  // require('dotenv').config();
+  const formEndpoint =
+    "https://public.herotofu.com/v1/ec1f8aa0-12fd-11ee-8267-d3eb100789b4";
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const inputs = e.target.elements;
+    const data = {};
+
+    for (let i = 0; i < inputs.length; i++) {
+      if (inputs[i].name) {
+        data[inputs[i].name] = inputs[i].value;
+      }
+    }
+
+    fetch(formEndpoint, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Form response was not ok");
+        }
+
+        setSubmitted(true);
+      })
+      .catch((err) => {
+        // Submit the form manually
+        e.target.submit();
+      });
+  };
+
+  if (submitted) {
+    return (
+      <div className="main-content">
+        <NavBar
+          activeSection={activeSection}
+          onSectionClick={handleSectionClick}
+        ></NavBar>
+
+        <article className="contact active" data-page="contact">
+          <header>
+            <h2 className="h2 article-title">Contact</h2>
+          </header>
+          <section className="contact-form">
+            <h3 className="h3 form-title">Contact Form</h3>
+          </section>
+          <p style={{color:"white"}} >Thank you! I will contact you soon! </p>
+        </article>
+      </div>
+    );
+  }
 
   return (
     <div className="main-content">
@@ -15,7 +74,7 @@ const Contact = (props) => {
         <header>
           <h2 className="h2 article-title">Contact</h2>
         </header>
-        
+
         {/* Map */}
         {/* <section className="mapbox" data-mapbox>
         <figure>
@@ -31,15 +90,19 @@ const Contact = (props) => {
         <section className="contact-form">
           <h3 className="h3 form-title">Contact Form</h3>
 
-          <form action="#" className="form" data-form>
+          <form
+            action={formEndpoint}
+            onSubmit={handleSubmit}
+            method="POST"
+            className="form"
+          >
             <div className="input-wrapper">
               <input
                 type="text"
-                name="fullname"
+                name="name"
                 className="form-input"
-                placeholder="Full name"
+                placeholder="Your name"
                 required
-                data-form-input
               />
 
               <input
@@ -48,19 +111,17 @@ const Contact = (props) => {
                 className="form-input"
                 placeholder="Email address"
                 required
-                data-form-input
               />
             </div>
 
             <textarea
               name="message"
               className="form-input"
-              placeholder="Your Message"
+              placeholder="Your message"
               required
-              data-form-input
             ></textarea>
 
-            <button className="form-btn" type="submit" disabled data-form-btn>
+            <button className="form-btn" type="submit">
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
@@ -68,6 +129,7 @@ const Contact = (props) => {
         </section>
       </article>
     </div>
+    
   );
 };
 

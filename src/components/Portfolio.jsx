@@ -20,6 +20,7 @@ const Portfolio = (props) => {
         "E-commerce website for dogs, offering a diverse selection of products including clothing, food, and toys. The website is deployed on Netlify",
       img: Mochi_Img,
       tech: "React, React Hooks, Redux, styled-components, Firebase for backend, Stripe for payment ",
+      link: "https://github.com/rlaqhalx/e-com-platform",
     },
     {
       type: "Web Development",
@@ -29,6 +30,7 @@ const Portfolio = (props) => {
         "Worked on building the emotional flow chart feature to track users’ emotional status & Provide personalized assistance by leveraging the data model",
       img: Civilience_Img,
       tech: "React, React Hooks, AWS, Web Design, Responsive Web Design",
+      link: "https://github.com/Civilience/civ-community-outlook",
     },
     {
       type: "Web Development",
@@ -38,6 +40,7 @@ const Portfolio = (props) => {
         "A community-level simulator to portfolio how COVID-19 and other infectious disease spread in different types of communities",
       img: Delineo_Img,
       tech: "React, Node, Unity",
+      link: "https://github.com/rlaqhalx/Delineo",
     },
     {
       type: "Web Development",
@@ -47,6 +50,7 @@ const Portfolio = (props) => {
         "An chat application for website to faciliate interaction between doctors and patients with features for file upload, UI change feature, and infinite scroll",
       img: Medistream_Img,
       tech: "Vue, JavaScript",
+      link: "https://github.com/rlaqhalx/vue-sendbird-ui",
     },
     {
       type: "Web Development",
@@ -56,6 +60,7 @@ const Portfolio = (props) => {
         "A platform, which secured 3rd place in the General Venture II competition, aims to redefine and enhance community engagement at the college-to-community level. It features an LLM AI hatbot that assists with event planning and registration.",
       img: Community_Img,
       tech: "Next.js, TypeScript, CSS, Python, SQL",
+      link: "https://github.com/rlaqhalx/community",
     },
     {
       type: "Web Development",
@@ -65,6 +70,7 @@ const Portfolio = (props) => {
         "Hotel reservation platform inspired by offical website of Skyscanner, meta-search engine and travel agency based in Scotland",
       img: WeScanner_Img,
       tech: "React, styled-components",
+      link: "https://github.com/rlaqhalx/34-2nd-Wescanner-frontend",
     },
   ];
 
@@ -79,6 +85,10 @@ const Portfolio = (props) => {
       ? portfolio_data.filter((project) => project.type === selectedCategory)
       : portfolio_data;
 
+  const handleDivClick = (link) => {
+    window.open(link, "_blank");
+  };
+
   return (
     <div className="main-content">
       <NavBar
@@ -88,7 +98,7 @@ const Portfolio = (props) => {
 
       <article className="blog active" data-page="blog">
         <header>
-          <h2 className="h2 article-title">Blog</h2>
+          <h2 className="h2 article-title">Portfolio</h2>
         </header>
 
         {/* From portfolio */}
@@ -130,16 +140,14 @@ const Portfolio = (props) => {
             {/* <li class="filter-item">
               <button data-filter-btn>Other Tab</button>
             </li> */}
-
           </ul>
         </section>
 
         <section className="blog-posts">
           <ul className="blog-posts-list">
             {filteredProjects.map((item, index) => (
-              <li className="blog-post-item" key={index}>
-                <a href="#">
-                  <figure className="blog-banner-box">
+              <li className="blog-post-item" onClick={() => handleDivClick(item.link)}>
+                  <figure className="blog-banner-box" key={index}>
                     <img src={item.img} alt={item.img} loading="lazy" />
                   </figure>
                   <div className="blog-content">
@@ -159,7 +167,6 @@ const Portfolio = (props) => {
                       </p>
                     </div>
                   </div>
-                </a>
               </li>
             ))}
             {/* Add more blog post items as needed */}

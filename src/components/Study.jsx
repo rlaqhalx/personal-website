@@ -52,7 +52,7 @@ const Study = (props) => {
 
       <article className="blog active" data-page="blog">
         <header>
-          <h2 className="h2 article-title">portfolio</h2>
+          <h2 className="h2 article-title">Study</h2>
         </header>
 
         {/* From portfolio */}
@@ -100,7 +100,6 @@ const Study = (props) => {
                 Statistics
               </button>
             </li>
-
           </ul>
         </section>
 
