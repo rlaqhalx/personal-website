@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import NavBar from "./Navbar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = (props) => {
   const { handleSectionClick, activeSection } = props;
@@ -72,7 +74,7 @@ const Contact = (props) => {
 
       <article className="contact active" data-page="contact">
         <header>
-          <h2 className="h2 article-title">Contact</h2>
+          <h2 className="h2 article-title"> Contact</h2>
         </header>
 
         {/* Map */}
@@ -103,6 +105,7 @@ const Contact = (props) => {
                 className="form-input"
                 placeholder="Your name"
                 required
+                style={{background: "#85A082"}}
               />
 
               <input
@@ -111,6 +114,7 @@ const Contact = (props) => {
                 className="form-input"
                 placeholder="Email address"
                 required
+                style={{background: "#85A082"}}
               />
             </div>
 
@@ -119,10 +123,11 @@ const Contact = (props) => {
               className="form-input"
               placeholder="Your message"
               required
+              style={{background: "#85A082"}}
             ></textarea>
 
             <button className="form-btn" type="submit">
-              <ion-icon name="paper-plane"></ion-icon>
+              <FontAwesomeIcon icon={faPaperPlane} name="paper-plane"> </FontAwesomeIcon>
               <span>Send Message</span>
             </button>
           </form>

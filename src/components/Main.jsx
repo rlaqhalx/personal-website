@@ -92,13 +92,13 @@ const Main = (props) => {
           <h2 className="h2 article-title">About me</h2>
         </header>
         <section className="about-text">
-          <p>
+          <p style={{fontWeight: 700}}>
             Hello! I am a software developer with a keen interest in data
             visualization. I enjoy the process of analyzing large datasets and
             transforming them into meaningful and clear representations.
           </p>
 
-          <p>
+          <p style={{fontWeight: 700}}>
             As a problem solver, I find satisfaction in devising innovative
             solutions that effectively communicate complex information. My goal
             is to utilize my frontend development clients to build
@@ -112,7 +112,7 @@ const Main = (props) => {
           <h3 className="h3 service-title">What I'm doing</h3>
           <ul className="service-list">
             {about_data.map((item, index) => (
-              <li className="service-item">
+              <li className="service-item" key={index}>
                 <div className="service-icon-box">
                   <img src={item.img} alt={item.img} width="40" />
                 </div>

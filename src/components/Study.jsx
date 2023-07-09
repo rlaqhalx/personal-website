@@ -1,35 +1,33 @@
 import React, { useState } from "react";
 import "./website.css";
 import NavBar from "./Navbar";
-import Mochi_Img from "../assets/mochis_img.png";
-import Civilience_Img from "../assets/civilience.png";
-import Delineo_Img from "../assets/Delineo.png";
-import Medistream_Img from "../assets/medistream.png";
-import Community_Img from "../assets/Community.png";
-import WeScanner_Img from "../assets/wescanner.png";
+import Algorithm_Img from "../assets/algorithm.webp";
+import Leetcode_Img from "../assets/leetcode.png"
 
 const Study = (props) => {
   const { handleSectionClick, activeSection } = props;
 
   const study_data = [
-    // {
-    //   type: "Web Development",
-    //   belong: "Personal Project",
-    //   title: "Mochi's",
-    //   content:
-    //     "E-commerce website for dogs, offering a diverse selection of products including clothing, food, and toys. The website is deployed on Netlify",
-    //   img: Mochi_Img,
-    //   tech: "React, React Hooks, Redux, styled-components, Firebase for backend, Stripe for payment ",
-    // },
-    // {
-    //   type: "Web Development",
-    //   belong: "Civilience",
-    //   title: "Health healthcare management platform",
-    //   content:
-    //     "Worked on building the emotional flow chart feature to track users’ emotional status & Provide personalized assistance by leveraging the data model",
-    //   img: Civilience_Img,
-    //   tech: "React, React Hooks, AWS, Web Design, Responsive Web Design",
-    // },
+    {
+      type: "Algorithm",
+      belong: "Personal Study",
+      title: "Algorithm + Data Structure",
+      content:
+        "linked-list, stack, queue, tree, graph, dynamic programming, sorting, etc.",
+      img: Algorithm_Img,
+      tech: "Python",
+      link: "https://github.com/rlaqhalx/algorithm",
+    },
+    {
+      type: "Algorithm",
+      belong: "Leetcode",
+      title: "Leetcode",
+      content:
+        "Blind 75 Must Do Leetcode",
+      img: Leetcode_Img,
+      tech: "Python",
+      link: "https://github.com/rlaqhalx/LeetCode",
+    },
   ];
 
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -42,6 +40,11 @@ const Study = (props) => {
     selectedCategory !== "All"
       ? study_data.filter((project) => project.type === selectedCategory)
       : study_data;
+
+  
+  const handleDivClick = (link) => {
+    window.open(link, "_blank");
+  };
 
   return (
     <div className="main-content">
@@ -73,11 +76,11 @@ const Study = (props) => {
               <button
                 data-filter-btn
                 className={
-                  selectedCategory === "Web Development" ? "active" : ""
+                  selectedCategory === "Algorithm" ? "active" : ""
                 }
-                onClick={() => filterProjects("Web Development")}
+                onClick={() => filterProjects("Algorithm")}
               >
-                Web Development
+                Algorithm
               </button>
             </li>
 
@@ -106,7 +109,7 @@ const Study = (props) => {
         <section className="blog-posts">
           <ul className="blog-posts-list">
             {filteredProjects.map((item, index) => (
-              <li className="blog-post-item" key={index}>
+              <li className="blog-post-item" key={index} onClick={() => handleDivClick(item.link)}>
                 <a href="#">
                   <figure className="blog-banner-box">
                     <img src={item.img} alt={item.img} loading="lazy" />

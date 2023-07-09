@@ -146,8 +146,9 @@ const Portfolio = (props) => {
         <section className="blog-posts">
           <ul className="blog-posts-list">
             {filteredProjects.map((item, index) => (
-              <li className="blog-post-item" onClick={() => handleDivClick(item.link)}>
-                  <figure className="blog-banner-box" key={index}>
+              <li className="blog-post-item" key={index} onClick={() => handleDivClick(item.link)}>
+                <a href="#">
+                  <figure className="blog-banner-box">
                     <img src={item.img} alt={item.img} loading="lazy" />
                   </figure>
                   <div className="blog-content">
@@ -167,6 +168,7 @@ const Portfolio = (props) => {
                       </p>
                     </div>
                   </div>
+                </a>
               </li>
             ))}
             {/* Add more blog post items as needed */}

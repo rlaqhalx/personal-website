@@ -19,7 +19,7 @@ const Sidebar = () => {
           <img src="./assets/avartar.png" alt="Bomi Kim" width="80" />
         </figure> */}
         <div className="info-content">
-          <h1 className="name" title="Bomi Kim">
+          <h1 className="name" title="Bomi Kim" style={{fontWeight: 700}}>
             Bomi Kim
           </h1>
           <p className="title">Software developer</p>
