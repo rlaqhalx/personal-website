@@ -97,10 +97,10 @@ const Study = (props) => {
             <li class="filter-item">
               <button
                 data-filter-btn
-                className={selectedCategory === "Statistics" ? "active" : ""}
-                onClick={() => filterProjects("Statistics")}
+                className={selectedCategory === "Machine Learning" ? "active" : ""}
+                onClick={() => filterProjects("Machine Learning")}
               >
-                Statistics
+                Machine Learning
               </button>
             </li>
           </ul>
