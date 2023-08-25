@@ -7,6 +7,7 @@ import Delineo_Img from "../assets/Delineo.png";
 import Medistream_Img from "../assets/medistream.png";
 import Community_Img from "../assets/Community.png";
 import WeScanner_Img from "../assets/wescanner.png";
+import Fandango_Img from "../assets/fandango.png"
 
 const Portfolio = (props) => {
   const { handleSectionClick, activeSection } = props;
@@ -21,6 +22,16 @@ const Portfolio = (props) => {
       img: Mochi_Img,
       tech: "React, React Hooks, Redux, styled-components, Firebase for backend, Stripe for payment ",
       link: "https://github.com/rlaqhalx/e-com-platform",
+    },
+    {
+      type: "Data Science",
+      belong: "Personal Project",
+      title: "Fandango Rating Analysis",
+      content:
+        "Analysis on movie rating disparities, particularly Fandango's tendency to consistently assign higher ratings",
+      img: Fandango_Img,
+      tech: "Python, Pandas, Matplotlib, Seaborn",
+      link: "https://github.com/rlaqhalx/movie_rating_analysis/blob/main/Movie_Rating_Analysis.ipynb",
     },
     {
       type: "Web Development",

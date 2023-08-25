@@ -3,6 +3,7 @@ import "./website.css";
 import NavBar from "./Navbar";
 import Algorithm_Img from "../assets/algorithm.webp";
 import Leetcode_Img from "../assets/leetcode.png"
+import DataAnalysis_Img from "../assets/data_analysis.png"
 
 const Study = (props) => {
   const { handleSectionClick, activeSection } = props;
@@ -27,6 +28,16 @@ const Study = (props) => {
       img: Leetcode_Img,
       tech: "Python",
       link: "https://github.com/rlaqhalx/LeetCode",
+    },
+    {
+      type: "Data Science",
+      belong: "Personal Study",
+      title: "Data Analysis",
+      content:
+        "Pandas, Numpy, Matplotlib, Seaborn, etc.",
+      img: DataAnalysis_Img,
+      tech: "Python, Jupyter Notebook",
+      link: "https://github.com/rlaqhalx/data_science_study.git",
     },
   ];
 
