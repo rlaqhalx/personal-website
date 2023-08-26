@@ -37,7 +37,7 @@ const Study = (props) => {
         "Pandas, Numpy, Matplotlib, Seaborn, etc.",
       img: DataAnalysis_Img,
       tech: "Python, Jupyter Notebook",
-      link: "https://github.com/rlaqhalx/data_science_study.git",
+      link: "https://github.com/rlaqhalx/data_science_study",
     },
   ];
 
