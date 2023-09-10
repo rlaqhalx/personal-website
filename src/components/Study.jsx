@@ -4,11 +4,21 @@ import NavBar from "./Navbar";
 import Algorithm_Img from "../assets/algorithm.webp";
 import Leetcode_Img from "../assets/leetcode.png"
 import DataAnalysis_Img from "../assets/data_analysis.png"
-
+import machineLearning_Img from  "../assets/machine-learning.png"
 const Study = (props) => {
   const { handleSectionClick, activeSection } = props;
 
   const study_data = [
+    {
+      type: "Data Science",
+      belong: "Personal Study",
+      title: "Machine Learning",
+      content:
+        "tensorflow, keras, etc.",
+      img: machineLearning_Img,
+      tech: "Python, GoogleColab",
+      link: "https://github.com/rlaqhalx/machine_learning_study/tree/main", 
+    },
     {
       type: "Algorithm",
       belong: "Personal Study",
@@ -20,6 +30,16 @@ const Study = (props) => {
       link: "https://github.com/rlaqhalx/algorithm",
     },
     {
+      type: "Data Science",
+      belong: "Personal Study",
+      title: "Data Analysis",
+      content:
+        "Pandas, Numpy, Matplotlib, Seaborn, etc.",
+      img: DataAnalysis_Img,
+      tech: "Python, Jupyter Notebook",
+      link: "https://github.com/rlaqhalx/data_science_study", 
+    },
+    {
       type: "Algorithm",
       belong: "Leetcode",
       title: "Leetcode",
@@ -29,16 +49,7 @@ const Study = (props) => {
       tech: "Python",
       link: "https://github.com/rlaqhalx/LeetCode",
     },
-    {
-      type: "Data Science",
-      belong: "Personal Study",
-      title: "Data Analysis",
-      content:
-        "Pandas, Numpy, Matplotlib, Seaborn, etc.",
-      img: DataAnalysis_Img,
-      tech: "Python, Jupyter Notebook",
-      link: "https://github.com/rlaqhalx/data_science_study",
-    },
+  
   ];
 
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -105,7 +116,7 @@ const Study = (props) => {
               </button>
             </li>
 
-            <li class="filter-item">
+            {/* <li class="filter-item">
               <button
                 data-filter-btn
                 className={selectedCategory === "Machine Learning" ? "active" : ""}
@@ -113,7 +124,7 @@ const Study = (props) => {
               >
                 Machine Learning
               </button>
-            </li>
+            </li> */}
           </ul>
         </section>
 
