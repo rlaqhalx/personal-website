@@ -8,7 +8,7 @@ import Medistream_Img from "../assets/medistream.png";
 import Community_Img from "../assets/Community.png";
 import WeScanner_Img from "../assets/wescanner.png";
 import Fandango_Img from "../assets/fandango.png"
-import machineLearning_Img from  "../assets/machine-learning.png"
+import DataSci_Img from  "../assets/data_science_algorithms.jpeg"
 
 const Portfolio = (props) => {
   const { handleSectionClick, activeSection } = props;
@@ -89,10 +89,10 @@ const Portfolio = (props) => {
       belong: "Personal Study",
       title: "Machine Learning",
       content:
-        "tensorflow, keras, etc.",
-      img: machineLearning_Img,
-      tech: "Python, GoogleColab",
-      link: "https://github.com/rlaqhalx/machine_learning_study/tree/main", 
+        "Data processing, Mathematical transformation, Computational Statistics, Machine Learing, Neural Networks, Optimization, Deep Learning, AI, Game Theory ",
+      img: DataSci_Img,
+      tech: "Python, Jupyter Notebook",
+      link: "https://github.com/rlaqhalx/data_science_algorithm", 
     },
   ];
 
