@@ -87,7 +87,7 @@ const Portfolio = (props) => {
     {
       type: "Data Science",
       belong: "Personal Study",
-      title: "Machine Learning",
+      title: "Machine Learning + AI",
       content:
         "Data processing, Mathematical transformation, Computational Statistics, Machine Learing, Neural Networks, Optimization, Deep Learning, AI, Game Theory ",
       img: DataSci_Img,
