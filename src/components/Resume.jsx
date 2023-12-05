@@ -10,7 +10,7 @@ const Resume = (props) => {
   const experienceData = [
     {
       title: "Frontend Developer",
-      duration: "2023 — Present",
+      duration: "2023",
       company: "Civilience",
       description: (
         <>

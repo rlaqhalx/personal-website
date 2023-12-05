@@ -67,15 +67,15 @@ const Main = (props) => {
       img: Back_End_Img,
     },
     {
+      title: "Data Science",
+      content:
+        "Data analysis, Data visualization, Machine learning, Deep learning",
+      img: Data_Science_Img,
+    },
+    {
       title: "Database Management & DevOps",
       content: "MongoDB, Firebase, Docker, Amazon AWS",
       img: Dev_Ops_Img,
-    },
-    {
-      title: "Data Science",
-      content:
-        "Data analysis, Data visualization, Statistical analysis, Machine learning",
-      img: Data_Science_Img,
     },
   ];
 
@@ -93,18 +93,22 @@ const Main = (props) => {
         </header>
         <section className="about-text">
           <p style={{ fontWeight: 700 }}>
-            Hello! I'm a data scientist with a profound fascination for the
-            realms of data visualization and machine learning. My journey
-            thrives on the art of dissecting substantial datasets and sculpting
-            them into purposeful portrayals.
+          Hello! As a data scientist, my passion lies at the intersection of machine learning, deep learning, and human-computer interaction. 
+          My journey is fueled by a deep commitment to integrating advanced data analysis techniques into everyday human life, enhancing understanding and decision-making.
+          </p>
+          <p style={{ fontWeight: 700 }}>
+          My expertise involves not only mining significant insights from extensive datasets but also ensuring that these insights are seamlessly 
+          integrated into human workflows through intuitive interfaces. 
+          This integration is key to making complex data patterns understandable and actionable for a wider audience.
           </p>
 
           <p style={{ fontWeight: 700 }}>
             As a problem solver, I find satisfaction in devising inventive
             solutions that convey intricate information in an accessible manner.
             My aim is to unravel insights from intricate data and consistently
-            explore new approaches to extract valuable insights and convey
-            complex patterns effectively.
+            explore new approaches to extract valuable insights and push the boundaries of how machine learning and HCI can 
+            collaborate to transform complex data into clear, impactful, and accessible information for all.
+
           </p>
         </section>
 
