@@ -9,6 +9,7 @@ import Community_Img from "../assets/Community.png";
 import WeScanner_Img from "../assets/wescanner.png";
 import Fandango_Img from "../assets/fandango.png"
 import DataSci_Img from  "../assets/data_science_algorithms.jpeg"
+import StrokeImg from  "../assets/stroke.jpeg"
 
 const Portfolio = (props) => {
   const { handleSectionClick, activeSection } = props;
@@ -27,6 +28,16 @@ const Portfolio = (props) => {
     {
       type: "Data Science",
       belong: "Personal Project",
+      title: "Stroke Prediction ML Model",
+      content:
+        "Exploration of Stroke Prediction Factors, focusing on the correlation between lifestyle, demographic attributes, and medical conditions with stroke incidence using machine learning algorithms.",
+      img: StrokeImg,
+      tech: "Python, Matplotlib, Seaborn, Sklearn",
+      link: "https://github.com/rlaqhalx/machine_learning_study/blob/main/Stroke_Prediction_Model.ipynb",
+    },
+    {
+      type: "Data Science",
+      belong: "Personal Project",
       title: "Fandango Rating Analysis",
       content:
         "Analysis on movie rating disparities, particularly Fandango's tendency to consistently assign higher ratings",
@@ -34,6 +45,7 @@ const Portfolio = (props) => {
       tech: "Python, Pandas, Matplotlib, Seaborn",
       link: "https://github.com/rlaqhalx/movie_rating_analysis/blob/main/Movie_Rating_Analysis.ipynb",
     },
+
     {
       type: "Web Development",
       belong: "Civilience",
