@@ -10,6 +10,14 @@ import WeScanner_Img from "../assets/wescanner.png";
 import Fandango_Img from "../assets/fandango.png"
 import DataSci_Img from  "../assets/data_science_algorithms.jpeg"
 import StrokeImg from  "../assets/stroke.jpeg"
+import TreeImg from "../assets/tree_based.png"
+import NLPImg from "../assets/nlp.jpeg"
+import WineImg from "../assets/wine.jpeg"
+import HeartDiseaseImg from "../assets/heart_disease.jpeg"
+import ColorQuantImg from "../assets/color_quantization.png"
+import DBSCAN_Img from "../assets/DBSCAN_vs_Clustering.jpeg"
+import Breast_fna_Img from "../assets/breast_cancer_fna.png"
+import CIA_country_Img from "../assets/cia_country_analysis.png"
 
 const Portfolio = (props) => {
   const { handleSectionClick, activeSection } = props;
@@ -28,12 +36,92 @@ const Portfolio = (props) => {
     {
       type: "Data Science",
       belong: "Personal Project",
+      title: "Predictive Customer Churn Analysis",
+      content:
+        "A Supervised Machine Learning Capstone Project Using Tree Methods",
+      img: TreeImg,
+      tech: "Decision Tree, Random Forest, AdaBoost, Gradient Boost",
+      link: "https://github.com/rlaqhalx/machine_learning_study/blob/main/11-Supervised-Learning-Capstone-Tree-Methods.ipynb",
+    },
+    {
+      type: "Data Science",
+      belong: "Personal Project",
       title: "Stroke Prediction ML Model",
       content:
         "Exploration of Stroke Prediction Factors, focusing on the correlation between lifestyle, demographic attributes, and medical conditions with stroke incidence using machine learning algorithms.",
       img: StrokeImg,
       tech: "Python, Matplotlib, Seaborn, Sklearn",
       link: "https://github.com/rlaqhalx/machine_learning_study/blob/main/Stroke_Prediction_Model.ipynb",
+    },
+    {
+      type: "Data Science",
+      belong: "Personal Project",
+      title: "NLP Text Classification",
+      content:
+        "Sentiment Analysis on Movie Reviews Using TF-IDF Vectorization and Supervised Learning with Linear SVC and Multinomial Naive Bayes",
+      img: NLPImg,
+      tech: "TfidfVectorizer, LinearSVC, Multinomial Naive Bayes. Pipeline, RandomizedSearchCV",
+      link: "https://github.com/rlaqhalx/machine_learning_study/blob/main/12-NLP-Text-Classification.ipynb",
+    },
+    {
+      type: "Data Science",
+      belong: "Personal Project",
+      title: "Heart Disease Prediction",
+      content:
+        "A Logistic Regression Model Utilizing Physical Features for Non-Invasive Detection",
+      img: HeartDiseaseImg,
+      tech: "LogisticRegressionCV, LogisticRegression + GridSearchCV",
+      link: "https://github.com/rlaqhalx/machine_learning_study/blob/main/Stroke_Prediction_Model.ipynb",
+    },
+    {
+      type: "Data Science",
+      belong: "Personal Project",
+      title: "Breast Cancer Detector from digitized images of fine needle aspirates (FNA) for breast masses",
+      content:
+        "Primary objective is to utilize PCA to reduce the dimentionality and uncover the most influential components that contribute to the variance in the cell nuclei.",
+      img: Breast_fna_Img,
+      tech: "manual PCA, Sklearn PCA",
+      link: "https://github.com/rlaqhalx/machine_learning_study/blob/main/17-PCA-Manual-Implementation%20Breast_Cancer_Dataset.ipynb"
+    },
+    {
+      type: "Data Science",
+      belong: "Personal Project",
+      title: "Detecting Wine Fraud using SVM",
+      content:
+        "An Exploration with Support Vector Machines for Identifying Low-Quality Wine Samples",
+      img: WineImg,
+      tech: "One-Hot Encoding, SVC, GridSearchCV",
+      link: "https://github.com/rlaqhalx/machine_learning_study/blob/main/05-SVM-Classification-Project%20Wine_Fraud_Detection.ipynb"
+    },
+    {
+      type: "Data Science",
+      belong: "Personal Project",
+      title: "CIA Country Analysis and Clustering",
+      content:
+        "Unveiling Global Patterns and Relationships through Data Exploration and K-Means Clustering and Hierarchical Clustering",
+      img: CIA_country_Img,
+      tech: "K-Means Clustering, Hierarchical Clustering, choropleth map",
+      link: "https://github.com/rlaqhalx/machine_learning_study/blob/main/15-CIA%20Country%20Analysis%20(Kmeans-Clustering-Project)%20.ipynb"
+    },
+    {
+      type: "Data Science",
+      belong: "Personal Project",
+      title: "Color Quantization Model with K-Means",
+      content:
+        "Unsupervised Learning for Image Color Reduction",
+      img: ColorQuantImg,
+      tech: "KMeans Clustering",
+      link: "https://github.com/rlaqhalx/machine_learning_study/blob/main/14-Kmeans-Color-Quantization.ipynb",
+    },
+    {
+      type: "Data Science",
+      belong: "Personal Project",
+      title: "Unsupervised Grocery Marting Analysis using DBSCAN",
+      content:
+        "DBSCAN Exploration and Comparative Analysis with Traditional Clustering Methods",
+      img: DBSCAN_Img,
+      tech: "DBSCAN, KMeans",
+      link: "https://github.com/rlaqhalx/machine_learning_study/blob/main/16-DBSCAN-Project%20Grocery_Marketing_Model.ipynb"
     },
     {
       type: "Data Science",
