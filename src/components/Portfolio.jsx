@@ -18,21 +18,12 @@ import ColorQuantImg from "../assets/color_quantization.png"
 import DBSCAN_Img from "../assets/DBSCAN_vs_Clustering.jpeg"
 import Breast_fna_Img from "../assets/breast_cancer_fna.png"
 import CIA_country_Img from "../assets/cia_country_analysis.png"
+import PubMedImg from "../assets/pubmed.jpeg"
 
 const Portfolio = (props) => {
   const { handleSectionClick, activeSection } = props;
 
   const portfolio_data = [
-    {
-      type: "Web Development",
-      belong: "Personal Project",
-      title: "Mochi's",
-      content:
-        "E-commerce website for dogs, offering a diverse selection of products including clothing, food, and toys. The website is deployed on Netlify",
-      img: Mochi_Img,
-      tech: "React, React Hooks, Redux, styled-components, Firebase for backend, Stripe for payment ",
-      link: "https://github.com/rlaqhalx/e-com-platform",
-    },
     {
       type: "Data Science",
       belong: "Personal Project",
@@ -42,6 +33,16 @@ const Portfolio = (props) => {
       img: TreeImg,
       tech: "Decision Tree, Random Forest, AdaBoost, Gradient Boost",
       link: "https://github.com/rlaqhalx/machine_learning_study/blob/main/11-Supervised-Learning-Capstone-Tree-Methods.ipynb",
+    },
+    {
+      type: "Data Science",
+      belong: "Personal Project",
+      title: "MedAbstractNet",
+      content:
+        "Utilized TF-IDF baseline, NLP models to classify different sequences in PubMed abstracts",
+      img: PubMedImg,
+      tech: "Navie Bayes with TF-IDF, Conv1D, Token & Character embeddings, Transfer Learning, Feature Learning: Positional Embedding ",
+      link: "https://github.com/rlaqhalx/machine_learning_study/blob/main/MedAbstractNet.ipynb"
     },
     {
       type: "Data Science",
@@ -133,7 +134,16 @@ const Portfolio = (props) => {
       tech: "Python, Pandas, Matplotlib, Seaborn",
       link: "https://github.com/rlaqhalx/movie_rating_analysis/blob/main/Movie_Rating_Analysis.ipynb",
     },
-
+    {
+      type: "Web Development",
+      belong: "Personal Project",
+      title: "Mochi's",
+      content:
+        "E-commerce website for dogs, offering a diverse selection of products including clothing, food, and toys. The website is deployed on Netlify",
+      img: Mochi_Img,
+      tech: "React, React Hooks, Redux, styled-components, Firebase for backend, Stripe for payment ",
+      link: "https://github.com/rlaqhalx/e-com-platform",
+    },
     {
       type: "Web Development",
       belong: "Civilience",
