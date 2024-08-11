@@ -35,7 +35,9 @@ const NavBar = ({ onSectionClick, activeSection }) => {
             Portfolio 
           </button>
         </li>
-        <li className="navbar-item">
+
+        {/* HERE is STUDY TAB -> To Enable and Show Study Tab, just uncomment this part!!! */}
+        {/* <li className="navbar-item">
         <button
             className={`navbar-link ${
               activeSection === "study" ? "active" : ""
@@ -44,7 +46,7 @@ const NavBar = ({ onSectionClick, activeSection }) => {
           >
             Study 
           </button>
-        </li>
+        </li> */}
         <li className="navbar-item">
         <button
             className={`navbar-link ${

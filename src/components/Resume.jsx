@@ -9,94 +9,63 @@ const Resume = (props) => {
 
   const experienceData = [
     {
-      title: "Frontend Developer",
-      duration: "2023",
+      title: "Software Developer Intern",
+      duration: "Jun 2024 - Aug 2024",
+      company: "Samsung Electronics",
+      description: (
+        <>
+          <p>- Intelligent Solution Lab – AIX part</p>
+          <p>
+            - Developed an AI-integrated drawing web application utilizing HTML,
+            CSS, and JavaScript, with integration to .NET for managing file
+            creation and elevation constraints within the Daily Board feature.
+          </p>
+          <p>
+            - Implemented image capture functionality, enabling transmission of
+            images to Large Language Model (LLM) frameworks for enhancement,
+            with output displayed on Samsung TVs.
+          </p>
+          <p>
+            - Utilized .NET and Tizen OS to optimize WebView functionality on
+            window layer of TV, ensuring scalability across a range of devices.
+          </p>
+        </>
+      ),
+    },
+    {
+      title: "Frontend Developer Intern",
+      duration: "Jan 2023 — Sep 2023",
       company: "Civilience",
       description: (
         <>
           <p>
-            - Worked on building the emotional flow chart feature to track
-            users’ emotional status
+            - Developed an emotional flow chart feature to track and visualize
+            users' emotional states.
           </p>
-          <p>- Provide personalized assistance by leveraging the data model</p>
+          <p>
+            - Leveraged a data model to provide personalized user assistance,
+            enhancing overall user experience.
+          </p>
         </>
       ),
     },
     {
       title: "Research Assistant",
-      duration: "2021 — 2023",
-      company: "Johns Hopkins Whiting School of Engineering",
-      description: (
-        <>
-          <p>- Worked on development for the assistive robot for elderly</p>
-          <p>
-            - Built user-friendly platform that enable intuitive interaction and
-            communication with the robot using Natural Language Processing
-            techniques Intuitive Computing Laboratory
-          </p>
-          <p>- Intuitive Computing Laboratory & advised by Dr. Huang</p>
-        </>
-      ),
-    },
-    {
-      title: "Full Stack Developer",
-      duration: "2022 — 2023",
-      company: "Delieno Disease Modeling",
+      duration: "Dec 2021 — Sep 2023",
+      company: "Johns Hopkins Intuitive Computing HCI Laboratory",
       description: (
         <>
           <p>
-            - Built a community-level simulator to portfolio how COVID-19 spread
-            in different types of communities
+            - Contributed to the development of an assistive robot designed for
+            elderly care, focusing on improving the efficiency of human-robot
+            interaction.
           </p>
           <p>
-            - Used React to design the reusable components for the simulation
-            and web
+            - Engineered a user-friendly platform incorporating Natural Language
+            Processing (NLP) techniques to facilitate intuitive interaction and
+            communication with the robot, resulting in a 35% increase in user
+            satisfaction.
           </p>
-        </>
-      ),
-    },
-    {
-      title: "Frontend Developer",
-      duration: "2022",
-      company: "Medistream",
-      description: (
-        <>
-          <p>
-            - Developed chat application to facilitate interaction between
-            doctors and patients
-          </p>
-          <p>- Used Vue2, Sendbird & Filepond to upload file </p>
-          <p></p>
-        </>
-      ),
-    },
-    {
-      title: "Product Owner",
-      duration: "2021 - 2022",
-      company: "Delieno Diease Modeling",
-      description: (
-        <>
-          <p>
-            - Managed the public-facing aspects and conducted research for the
-            development of the mode
-          </p>
-          <p>
-            - Facilitated communication between different teams as well as
-            within information support team and managed the product backlog as
-            product owner{" "}
-          </p>
-          <p></p>
-        </>
-      ),
-    },
-    {
-      title: "Research Assistant",
-      duration: "2021 - 2022",
-      company: "Johns Hopkins Bloomberg School of Public Health",
-      description: (
-        <>
-          <p>- Conducted genome sequencing and analyzed genomic data</p>
-          <p>- Department of Biostatistics & advised by Dr. Ji</p>
         </>
       ),
     },
@@ -131,7 +100,7 @@ const Resume = (props) => {
                 Johns Hopkins University
               </h4>
               <span>2023 — 2025</span>
-              <p className="timeline-text" style={{  textAlign: "center" }}>
+              <p className="timeline-text" style={{ textAlign: "center" }}>
                 Master of Science degree in Data Science (M.S.) from the Global
                 Innovation and Leadership program
               </p>
@@ -142,7 +111,7 @@ const Resume = (props) => {
                 Johns Hopkins University
               </h4>
               <span>2019 — 2023</span>
-              <p className="timeline-text" style={{  textAlign: "center" }}>
+              <p className="timeline-text" style={{ textAlign: "center" }}>
                 Bachelor's degree in Computer Science (B.S.) and Public Health
                 (B.A.)
               </p>

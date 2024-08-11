@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./website.css";
 import NavBar from "./Navbar";
 import Web_Dev_Img from "../assets/web_dev.png";
-import Machine_Learning_Img from "../assets/machine_learning.png"
+import Machine_Learning_Img from "../assets/machine_learning.png";
 import Data_Sci_Img from "../assets/data-science.jpeg";
 import Data_Visual_Img from "../assets/data_visualization.png";
 import Front_End_Img from "../assets/front_end.png";
@@ -29,52 +29,55 @@ const Main = (props) => {
 
   const about_data = [
     {
+      title: "Software Development",
+      content:
+        "Extensive experience in full-stack software development, integrating front-end and back-end technologies with a focus on building scalable, high-performance applications and robust system architectures.",
+      img: Web_Dev_Img,
+    },
+
+    {
       title: "Data Science",
       content:
-        "Proficiency in in statistical analysis, data science algorithms, and optimization techniques to extract meaningful insights",
+        "Expert in statistical analysis, data mining, and the application of advanced data science algorithms, including optimization techniques, to derive meaningful insights from complex datasets.",
       img: Data_Sci_Img,
     },
     {
-      title: "Machine Learing",
+      title: "Machine Learing & Deep Learning",
       content:
-        "Utilizies cutting-edge algorithms to extract valuable patterns from data and apply them in guiding informed decision-making" 
-        ,  img: Machine_Learning_Img,
+        "Proficient in deploying cutting-edge machine learning and deep learning algorithms to identify valuable patterns in data, implementing models that guide data-driven decision-making and predictive analytics.",
+      img: Machine_Learning_Img,
     },
     {
-      title: "Data Visualization",
+      title: "Human-Computer Interaction (HCI)",
       content:
-        "Skilled in data visualization, utilizing visual storytelling techniques to effectively convey complex information and insights",
+        "Specialized in designing and developing intuitive interfaces that bridge the gap between complex data processes and user-friendly experiences, enhancing accessibility and usability in software solutions.",
       img: Data_Visual_Img,
-    },
-    {
-      title: "Web Development",
-      content:
-        "Comprehensive web development clients, merging front-end and back-end technologies",
-      img: Web_Dev_Img,
     },
   ];
 
   const skills_data = [
     {
-      title: "Frontend Development",
+      title: "Software Development",
       content:
-        "HTML, CSS, SCSS, Styled-Component, JavaScript, React.js, Redux.js, Vue.js, Next.js, TypeScript, Responsive Web Design",
-      img: Front_End_Img,
-    },
-    {
-      title: "Backend Development",
-      content: "Python, Java, Node.js, Express",
+        "Python, C#, Node.js, Express, Object-Oriented Programming, Software Architecture, API Development, Version Control (Git)",
       img: Back_End_Img,
     },
     {
-      title: "Data Science",
+      title: "Web Development",
       content:
-        "Data analysis, Data visualization, Machine learning, Deep learning",
+        "HTML, CSS, SCSS, JavaScript, React.js, Redux.js, TypeScript, Responsive Web Design, Full-Stack Development",
+      img: Front_End_Img,
+    },
+    {
+      title: "Data Science & Machine Learning",
+      content:
+        "Data Analysis, Machine Learning, Deep Learning, TensorFlow, Scikit-learn, Data Wrangling, Model Evaluation, Data Pipelines, ETL Processes",
       img: Data_Science_Img,
     },
     {
       title: "Database Management & DevOps",
-      content: "MongoDB, Firebase, Docker, Amazon AWS",
+      content:
+        "SQL, NoSQL (MongoDB, Firebase), Docker, Amazon AWS, Database Design, Cloud Services",
       img: Dev_Ops_Img,
     },
   ];
@@ -93,22 +96,29 @@ const Main = (props) => {
         </header>
         <section className="about-text">
           <p style={{ fontWeight: 700 }}>
-          Hello! As a data scientist, my passion lies at the intersection of machine learning, deep learning, and human-computer interaction. 
-          My journey is fueled by a deep commitment to integrating advanced data analysis techniques into everyday human life, enhancing understanding and decision-making.
+            Hello! As a software developer with a strong foundation in machine
+            learning and deep learning, I thrive at the intersection of
+            data-driven insights and software innovation. My journey is centered
+            on leveraging advanced data analysis techniques to build robust,
+            scalable applications that not only solve complex problems but also
+            enhance user experiences.
           </p>
           <p style={{ fontWeight: 700 }}>
-          My expertise involves not only mining significant insights from extensive datasets but also ensuring that these insights are seamlessly 
-          integrated into human workflows through intuitive interfaces. 
-          This integration is key to making complex data patterns understandable and actionable for a wider audience.
+            With a solid track record of developing software solutions and
+            multiple projects in machine learning and deep learning, I bring a
+            unique blend of technical skills and creativity to every project. My
+            expertise lies in transforming complex data into actionable
+            insights, and integrating these insights into software applications
+            that are intuitive, efficient, and impactful.
           </p>
 
           <p style={{ fontWeight: 700 }}>
-            As a problem solver, I find satisfaction in devising inventive
-            solutions that convey intricate information in an accessible manner.
-            My aim is to unravel insights from intricate data and consistently
-            explore new approaches to extract valuable insights and push the boundaries of how machine learning and HCI can 
-            collaborate to transform complex data into clear, impactful, and accessible information for all.
-
+            Driven by a passion for problem-solving, I continuously explore new
+            methods to push the boundaries of software development and data
+            science, ensuring that the products I build are not only technically
+            sound but also valuable and accessible to users. My goal is to
+            continue creating software solutions that harness the power of data
+            to drive innovation and improve decision-making across industries.
           </p>
         </section>
 

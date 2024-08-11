@@ -22,7 +22,7 @@ const Sidebar = () => {
           <h1 className="name" title="Bomi Kim" style={{fontWeight: 700}}>
             Bomi Kim
           </h1>
-          <p className="title">Data Scientist</p>
+          <p className="title">Software Developer</p>
         </div>
         <button className="info_more-btn" data-sidebar-btn onClick = {() => setShowContacts(!showContacts)}>
           <span> {showContacts? "Hide Contacts" : "Show Contacts"} </span>
